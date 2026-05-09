@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prompt Engineering Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="workspace" aria-labelledby="page-title">
+        <div class="intro-panel">
+          <div>
+            <p class="eyebrow">AI Skills Demo</p>
+            <h1 id="page-title">Prompt Engineering</h1>
+            <p class="lede">
+              Learn how clearer instructions, examples, and constraints help AI
+              return precise responses while reducing wasted tokens and cost.
+            </p>
+          </div>
+
+          <div class="signal-grid" aria-label="Prompt engineering benefits">
+            <article>
+              <span class="metric">01</span>
+              <strong>Essential Skill</strong>
+              <p>Useful for anyone entering AI-powered work.</p>
+            </article>
+            <article>
+              <span class="metric">02</span>
+              <strong>Precise Responses</strong>
+              <p>Turns vague requests into reliable instructions.</p>
+            </article>
+            <article>
+              <span class="metric">03</span>
+              <strong>Lower Cost</strong>
+              <p>Reduces retries, extra tokens, and response drift.</p>
+            </article>
+          </div>
+        </div>
+
+        <section class="lab-grid" aria-label="Prompt engineering demo lab">
+          <article class="builder-panel">
+            <div class="section-heading">
+              <p class="eyebrow">Interactive Builder</p>
+              <h2>Compose a stronger prompt</h2>
+            </div>
+
+            <label for="goal">Task goal</label>
+            <textarea id="goal" rows="3">Explain prompt engineering to a beginner who wants to use AI at work.</textarea>
+
+            <div class="control-row" role="group" aria-label="Prompt technique">
+              <button class="technique active" data-mode="zero-shot" type="button">Zero-shot</button>
+              <button class="technique" data-mode="few-shot" type="button">Few-shot</button>
+              <button class="technique" data-mode="structured" type="button">Structured</button>
+            </div>
+
+            <label for="audience">Audience</label>
+            <input id="audience" value="college students starting with AI tools" />
+
+            <label for="constraints">Constraints</label>
+            <input id="constraints" value="keep it concise, include 4 bullet points, avoid jargon" />
+
+            <button id="copyPrompt" class="primary-action" type="button">Copy prompt</button>
+          </article>
+
+          <article class="output-panel">
+            <div class="section-heading">
+              <p class="eyebrow">Generated Prompt</p>
+              <h2>Ready to test</h2>
+            </div>
+            <pre id="promptOutput" aria-live="polite"></pre>
+            <p id="copyStatus" class="copy-status" aria-live="polite"></p>
+          </article>
+        </section>
+
+        <section class="technique-strip" aria-label="Prompting techniques">
+          <article>
+            <div class="icon zero">Z</div>
+            <h3>Zero-shot prompting</h3>
+            <p>Ask directly without examples when the task is familiar and simple.</p>
+          </article>
+          <article>
+            <div class="icon few">F</div>
+            <h3>Few-shot prompting</h3>
+            <p>Include examples so the model can match your format, tone, or logic.</p>
+          </article>
+          <article>
+            <div class="icon structured">S</div>
+            <h3>Structured prompting</h3>
+            <p>Define role, goal, context, constraints, and output format up front.</p>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
